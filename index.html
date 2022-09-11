@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project-Sign-Up-Form</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
     <div class="container">
-
         <div class="left-part">
-            <div class="logo-wrapper">
-                <img alt="logo-odin" src="img/odin-lined.png" class="logo-img"></img>
-                <span class="logo-text">ODIN</span>
+            <div class="logo__wrapper">
+                <img alt="logo-odin" src="img/odin-lined.png" class="logo__img"></img>
+                <span class="logo__text">ODIN</span>
             </div>
+            <span class="picture__license license">Photo by <a target="_blank" href="https://unsplash.com/@haliewestphoto" class="license__link">Halie West</a> on <a target="_blank" href="https://unsplash.com" class="license__link">Unsplash</a></span>
         </div>
 
         <div class="right-part">
@@ -25,34 +26,37 @@
                 <p class="description__bottom">You <i>know</i> you want to.</p>
             </section>
             <section class="form">
-                <form action="#" method="post" class="registration-form">
-                    <legend class="form__title">Let's do this!</legend>
-                    <ul class="form__list">
-                        <li class="form__item1">
-                            <label for="FIRST Name" class="form__label">FIRST Name</label>
-                            <input type="s" class="form__input" id="FIRST Name," name="FIRST Name,">
-                        </li>
-                        <li class="form__item2">
-                            <label for="LAST NAME" class="form__label">LAST NAME</label>
-                            <input type="text" class="form__input" id="LAST NAME," name="LAST NAME,">
-                        </li>
-                        <li class="form__item3">
-                            <label for="EMAIL" class="form__label">EMAIL</label>
-                            <input type="text" class="form__input" id="EMAIL," name="EMAIL,">
-                        </li>
-                        <li class="form__item4">
-                            <label for="PHONE NUMBER" class="form__label">PHONE NUMBER</label>
-                            <input type="text" class="form__input" id="PHONE NUMBER," name="PHONE NUMBER,">
-                        </li>
-                        <li class="form__item5">
-                            <label for="PASSWORD" class="form__label">PASSWORD</label>
-                            <input type="text" class="form__input" id="PASSWORD," name="PASSWORD,">
-                        </li>
-                        <li class="form__item6">
-                            <label for="CONFIRM PASSWORD" class="form__label">CONFIRM PASSWORD</label>
-                            <input type="text" class="form__input" id="CONFIRM PASSWORD," name="CONFIRM PASSWORD,">
-                        </li>
-                    </ul>
+                <form action="" method="post" class="registration-form">
+                    <div class="form__group">
+                        <legend class="form__title">Let's do this!</legend>
+                        <ul class="form__list">
+                            <li class="form__item form__item1">
+                                <label for="FIRST NAME" class="form__label">FIRST NAME</label>
+                                <input type="text" class="form__input" id="userFirstName," name="FIRST NAME">
+                            </li>
+                            <li class="form__item form__item2">
+                                <label for="LAST NAME" class="form__label">LAST NAME</label>
+                                <input type="text" class="form__input" id="userLastName," name="LAST NAME">
+                            </li>
+                            <li class="form__item form__item3">
+                                <label for="EMAIL" class="form__label">EMAIL</label>
+                                <input type="email" class="form__input" id="userEmaail" name="EMAIL">
+                            </li>
+                            <li class="form__item form__item4">
+                                <label for="PHONE NUMBER" class="form__label">PHONE NUMBER</label>
+                                <input type="tel" class="form__input" id="userPhoneNumber" name="PHONE NUMBER">
+                            </li>
+                            <li class="form__item form__item5">
+                                <label for="PASSWORD" class="form__label">PASSWORD</label>
+                                <input type="password" class="form__input" id="password" name="PASSWORD" pattern="((?=.+[0-9])(?=.+[a-z])(?=.*[A-Z])).{6,}" alt="asdf">
+                                <span class="form__alert">* Passwords do not match</span>
+                            </li>
+                            <li class="form__item form__item6">
+                                <label for="CONFIRM PASSWORD" class="form__label">CONFIRM PASSWORD</label>
+                                <input type="password" class="form__input" id="confirmPassword" name="CONFIRM PASSWORD">
+                            </li>
+                        </ul>
+                    </div>
                     <button type="submit" class="form__btn btn">Create account</button>
                 </form>
                 <p class="question">Already have an account?<a href="" class="log-in">Log in</a></p>
